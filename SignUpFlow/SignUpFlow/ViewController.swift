@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tabView() {
-        
+        self.view.endEditing(true)
     }
 
 }
