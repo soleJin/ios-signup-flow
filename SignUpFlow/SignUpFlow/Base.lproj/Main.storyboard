@@ -80,6 +80,9 @@
                                 <rect key="frame" x="161" y="364" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="dismiss"/>
+                                <connections>
+                                    <action selector="dissmissPage" destination="D3w-eY-75i" eventType="touchUpInside" id="LJd-YT-8p3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xb2-e9-HQs"/>
