@@ -38,9 +38,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvX-1P-BPD">
                                 <rect key="frame" x="90" y="455" width="47" height="30"/>
                                 <state key="normal" title="Sign In"/>
-                                <connections>
-                                    <action selector="touchUpSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zil-EJ-J8z"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSS-Ju-7FF">
                                 <rect key="frame" x="231" y="455" width="54" height="30"/>
@@ -76,37 +73,23 @@
                             <outletCollection property="gestureRecognizers" destination="wu3-15-JLJ" appends="YES" id="cQF-vC-eF9"/>
                         </connections>
                     </view>
-                    <connections>
-                        <outlet property="idTextField" destination="A4o-Nj-KIm" id="nrk-Sm-3hT"/>
-                        <outlet property="passwordTextField" destination="566-AB-dkl" id="jFG-Mh-dXw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Vxp-tp-Q4e">
+                <tapGestureRecognizer id="wu3-15-JLJ">
                     <connections>
-                        <action selector="tabView" destination="BYZ-38-t0r" id="5Tg-HH-NFx"/>
+                        <action selector="tapView:" destination="BYZ-38-t0r" id="cV4-3K-hq6"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-197.59999999999999" y="96.059113300492612"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--View Controller-->
         <scene sceneID="cMb-xz-oN6">
             <objects>
-                <viewController id="D3w-eY-75i" customClass="SignUpViewController" customModule="SignUpFlow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="D3w-eY-75i" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oQf-qF-PFA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7W-iu-IuP">
-                                <rect key="frame" x="161" y="364" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="dismiss"/>
-                                <connections>
-                                    <action selector="dissmissPage" destination="D3w-eY-75i" eventType="touchUpInside" id="LJd-YT-8p3"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xb2-e9-HQs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
