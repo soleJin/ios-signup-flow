@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C6C826625765F5600DD0D1D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C826525765F5600DD0D1D /* SignUpViewController.swift */; };
 		C7352B87256F59BD00C3B7F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7352B86256F59BD00C3B7F1 /* AppDelegate.swift */; };
 		C7352B89256F59BD00C3B7F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7352B88256F59BD00C3B7F1 /* SceneDelegate.swift */; };
 		C7352B8B256F59BD00C3B7F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7352B8A256F59BD00C3B7F1 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C6C826525765F5600DD0D1D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C7352B83256F59BD00C3B7F1 /* SignUpFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7352B86256F59BD00C3B7F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7352B88256F59BD00C3B7F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +66,7 @@
 				C7352B88256F59BD00C3B7F1 /* SceneDelegate.swift */,
 				FD414EDC2575DF4300BB4C42 /* UserInformation.swift */,
 				C7352B8A256F59BD00C3B7F1 /* ViewController.swift */,
-				FD19C5402576B1B100ED9BB9 /* SecondViewController.swift */,
+				4C6C826525765F5600DD0D1D /* SignUpViewController.swift */,
 				C7352B8C256F59BD00C3B7F1 /* Main.storyboard */,
 				C7352B8F256F59BF00C3B7F1 /* Assets.xcassets */,
 				C7352B91256F59BF00C3B7F1 /* LaunchScreen.storyboard */,
@@ -148,6 +150,7 @@
 				C7352B87256F59BD00C3B7F1 /* AppDelegate.swift in Sources */,
 				FD19C5412576B1B100ED9BB9 /* SecondViewController.swift in Sources */,
 				C7352B89256F59BD00C3B7F1 /* SceneDelegate.swift in Sources */,
+				4C6C826625765F5600DD0D1D /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
