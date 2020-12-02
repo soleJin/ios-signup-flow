@@ -17,37 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1dC-xa-VPT">
-                                <rect key="frame" x="87" y="73" width="240" height="241"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="1dC-xa-VPT">
+                                <rect key="frame" x="87" y="74" width="201" height="254"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1dC-xa-VPT" secondAttribute="height" multiplier="1:1" id="Hkq-dq-DAH"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W2y-Zr-EIa">
-                                <rect key="frame" x="87" y="335" width="240" height="34"/>
+                                <rect key="frame" x="87" y="349" width="201" height="34"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="buS-xm-nM9">
-                                <rect key="frame" x="87" y="377" width="240" height="34"/>
+                                <rect key="frame" x="87" y="391" width="201" height="34"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSS-Ju-7FF">
-                                <rect key="frame" x="227" y="426" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvX-1P-BPD">
+                                <rect key="frame" x="90" y="455" width="47" height="30"/>
+                                <state key="normal" title="Sign In"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSS-Ju-7FF">
+                                <rect key="frame" x="231" y="455" width="54" height="30"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvX-1P-BPD">
-                                <rect key="frame" x="87" y="426" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <segue destination="xZe-LD-dNY" kind="presentation" modalPresentationStyle="fullScreen" id="LM2-A2-FX1"/>
+                                    <segue destination="D3w-eY-75i" kind="presentation" id="06a-yh-pjd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,7 +55,10 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="buS-xm-nM9" secondAttribute="bottom" constant="451" id="5vQ-06-IX8"/>
                             <constraint firstItem="1dC-xa-VPT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8sy-QO-Xzj"/>
+                            <constraint firstItem="wvX-1P-BPD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="H4a-Y4-KQn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LSS-Ju-7FF" secondAttribute="trailing" constant="90" id="Lj9-VY-xz5"/>
                             <constraint firstItem="buS-xm-nM9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ONz-IY-3em"/>
+                            <constraint firstItem="wvX-1P-BPD" firstAttribute="top" secondItem="buS-xm-nM9" secondAttribute="bottom" constant="30" id="a9B-di-cTY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1dC-xa-VPT" secondAttribute="bottom" constant="548" id="cLg-Fg-v59"/>
                             <constraint firstItem="W2y-Zr-EIa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dzZ-up-Mvk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1dC-xa-VPT" secondAttribute="trailing" constant="87" id="edp-AM-dal"/>
@@ -66,6 +67,7 @@
                             <constraint firstItem="1dC-xa-VPT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="koq-un-07e"/>
                             <constraint firstItem="buS-xm-nM9" firstAttribute="top" secondItem="W2y-Zr-EIa" secondAttribute="bottom" constant="8" id="rOv-VL-Map"/>
                             <constraint firstItem="1dC-xa-VPT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="wSu-oB-Niv"/>
+                            <constraint firstItem="LSS-Ju-7FF" firstAttribute="top" secondItem="buS-xm-nM9" secondAttribute="bottom" constant="30" id="yK7-di-OdJ"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="wu3-15-JLJ" appends="YES" id="cQF-vC-eF9"/>
@@ -101,7 +103,7 @@
             <objects>
                 <viewController id="xZe-LD-dNY" customClass="SecondViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iSC-xv-0hG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Oyg-NX-NJt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -113,7 +115,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="heart" width="234" height="254"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
