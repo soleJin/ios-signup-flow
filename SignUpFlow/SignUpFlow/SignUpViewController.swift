@@ -31,23 +31,28 @@ class SignUpViewController: UIViewController {
         passwordTextField.delegate = self
         checkPasswordTextField.delegate = self
         introductionTextView.delegate = self
-        
+
     }
     
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
     
-    @IBAction func dissmissSignUpView() {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func isFullFillTextView(introductionTextView :UITextView) {
-        if introductionTextView.text == "" {
-            nextButton.isEnabled = false
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.hasText {
+            nextButton.isEnabled = true
         }
     }
     
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if introductionTextView.hasText {
+            nextButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func dissmissSignUpView() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
