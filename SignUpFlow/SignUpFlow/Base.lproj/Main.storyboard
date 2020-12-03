@@ -29,7 +29,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" textContentType="one-time-code"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" secureTextEntry="YES" textContentType="one-time-code"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSS-Ju-7FF">
                                 <rect key="frame" x="185" y="448" width="100" height="30"/>
@@ -49,9 +49,6 @@
                                     <constraint firstAttribute="width" constant="100" id="yHq-Gi-8KB"/>
                                 </constraints>
                                 <state key="normal" title="Sign In"/>
-                                <connections>
-                                    <action selector="touchUpSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rOL-b3-9hA"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="1dC-xa-VPT">
                                 <rect key="frame" x="109" y="80" width="156" height="254"/>
@@ -78,18 +75,9 @@
                             <outletCollection property="gestureRecognizers" destination="wu3-15-JLJ" appends="YES" id="cQF-vC-eF9"/>
                         </connections>
                     </view>
-                    <connections>
-                        <outlet property="idTextField" destination="W2y-Zr-EIa" id="LGc-pt-aH0"/>
-                        <outlet property="passwordTextField" destination="buS-xm-nM9" id="Nqo-g4-kaY"/>
-                        <outlet property="statusMessageLabel" destination="9Ef-6D-daC" id="R4j-eJ-2TD"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="wu3-15-JLJ">
-                    <connections>
-                        <action selector="tapView:" destination="BYZ-38-t0r" id="cV4-3K-hq6"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wu3-15-JLJ"/>
             </objects>
             <point key="canvasLocation" x="-197.59999999999999" y="96.059113300492612"/>
         </scene>
