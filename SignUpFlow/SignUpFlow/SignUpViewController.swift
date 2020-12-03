@@ -23,7 +23,6 @@ class SignUpViewController: UIViewController {
         return picker
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
             
@@ -33,19 +32,7 @@ class SignUpViewController: UIViewController {
         introductionTextView.delegate = self
 
     }
-    
-    @IBAction func tapView(_ sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
-    }
-    
-    func checkCanGoNext() {
-        if profileImage.image == nil || passwordTextField.text != checkPasswordTextField.text || idTextField.text == "" || passwordTextField.text == "" {
-            nextButton.isEnabled = false
-        } else {
-        nextButton.isEnabled = true
-        }
-    }
-    
+
     @IBAction func dissmissSignUpView() {
         dismiss(animated: true, completion: nil)
     }
@@ -86,6 +73,22 @@ extension SignUpViewController: UITextViewDelegate, UITextFieldDelegate {
         return true
     }
     
+    @IBAction func tapView(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+        if passwordTextField.text != checkPasswordTextField.text {
+            passwordTextField.textColor = .red
+            checkPasswordTextField.textColor = .red
+        }
+    }
+
+    func checkCanGoNext() {
+        if profileImage.image == nil || passwordTextField.text != checkPasswordTextField.text || idTextField.text == "" || passwordTextField.text == "" {
+            nextButton.isEnabled = false
+        } else {
+        nextButton.isEnabled = true
+        }
+    }
+    
     func textViewDidEndEditing(_ textView: UITextView) {
         checkCanGoNext()
     }
@@ -93,5 +96,4 @@ extension SignUpViewController: UITextViewDelegate, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         checkCanGoNext()
     }
-
 }
