@@ -38,15 +38,11 @@ class SignUpViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField.hasText {
-            nextButton.isEnabled = true
-        }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if introductionTextView.hasText {
-            nextButton.isEnabled = true
+    func checkCanGoNext() {
+        if profileImage.image == nil || passwordTextField.text != checkPasswordTextField.text || idTextField.text == "" || passwordTextField.text == "" {
+            nextButton.isEnabled = false
+        } else {
+        nextButton.isEnabled = true
         }
     }
     
@@ -69,6 +65,7 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
         if let image: UIImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             profileImage.image = image
         }
+        checkCanGoNext()
         self.dismiss(animated: true, completion: nil)
     }
 }
@@ -88,4 +85,13 @@ extension SignUpViewController: UITextViewDelegate, UITextFieldDelegate {
         }
         return true
     }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        checkCanGoNext()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        checkCanGoNext()
+    }
+
 }
