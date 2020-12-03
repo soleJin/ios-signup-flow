@@ -50,7 +50,7 @@ class UserInformation {
     
     func addNewUser(id: String) {
         guard userDirectory[id] == nil else {
-            debugPrint(Message.existedId)
+            debugPrint(Message.existedID)
             return
         }
         userDirectory[id] = User(id)

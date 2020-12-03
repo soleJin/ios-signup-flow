@@ -29,7 +29,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" secureTextEntry="YES" textContentType="one-time-code"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" textContentType="one-time-code"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSS-Ju-7FF">
                                 <rect key="frame" x="185" y="448" width="100" height="30"/>
@@ -49,13 +49,16 @@
                                     <constraint firstAttribute="width" constant="100" id="yHq-Gi-8KB"/>
                                 </constraints>
                                 <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="touchUpSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ro6-Fh-8Fm"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="1dC-xa-VPT">
                                 <rect key="frame" x="109" y="80" width="156" height="254"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="statusMessageLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-6D-daC">
-                                <rect key="frame" x="85" y="423" width="205" height="21"/>
+                                <rect key="frame" x="85" y="419" width="205" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
@@ -75,9 +78,18 @@
                             <outletCollection property="gestureRecognizers" destination="wu3-15-JLJ" appends="YES" id="cQF-vC-eF9"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="idTextField" destination="W2y-Zr-EIa" id="bfo-oZ-Bgx"/>
+                        <outlet property="passwordTextField" destination="buS-xm-nM9" id="MhN-3S-KzU"/>
+                        <outlet property="statusMessageLabel" destination="9Ef-6D-daC" id="9QH-rs-Cv0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="wu3-15-JLJ"/>
+                <tapGestureRecognizer id="wu3-15-JLJ">
+                    <connections>
+                        <action selector="tapView:" destination="BYZ-38-t0r" id="jFd-cX-4ZD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-197.59999999999999" y="96.059113300492612"/>
         </scene>
@@ -104,7 +116,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OsD-4a-STD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OsD-4a-STD">
                                 <rect key="frame" x="16" y="57" width="115" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -144,17 +156,24 @@
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="dismissSignUpView" destination="xZe-LD-dNY" eventType="touchUpInside" id="OJm-5w-Zgb"/>
+                                    <action selector="dissmissSignUpView" destination="xZe-LD-dNY" eventType="touchUpInside" id="G78-u7-Xuu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HR-0e-6eR">
                                 <rect key="frame" x="218" y="738" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음">
-                                    <color key="titleColor" systemColor="systemGray2Color"/>
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
                                 </state>
                                 <connections>
                                     <segue destination="qgI-ZA-c9O" kind="show" id="wfI-be-MV8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8c7-Dg-tgd">
+                                <rect key="frame" x="16" y="57" width="115" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="touchUpSelectImageButton:" destination="xZe-LD-dNY" eventType="touchUpInside" id="tvy-CE-suY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -167,20 +186,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="L2c-fr-0rb"/>
                     <connections>
-                        <outlet property="checkPasswordField" destination="Goq-Cx-Xmj" id="SRz-H2-77a"/>
-                        <outlet property="idTextField" destination="8zg-u4-fZq" id="KTO-Xl-Zcx"/>
-                        <outlet property="introductionTextView" destination="Wah-9L-jbP" id="UTh-Bl-ITj"/>
-                        <outlet property="nextButton" destination="5HR-0e-6eR" id="Uyr-yn-cKF"/>
-                        <outlet property="passwordTextField" destination="4M1-cC-7PE" id="5q1-l3-0GL"/>
-                        <outlet property="profileImage" destination="OsD-4a-STD" id="zBW-bt-nZr"/>
+                        <outlet property="checkPasswordTextField" destination="Goq-Cx-Xmj" id="vcC-Qu-qJZ"/>
+                        <outlet property="idTextField" destination="8zg-u4-fZq" id="G4q-Vr-HRh"/>
+                        <outlet property="introductionTextView" destination="Wah-9L-jbP" id="SjX-Cr-WRV"/>
+                        <outlet property="nextButton" destination="5HR-0e-6eR" id="3o5-1z-Aos"/>
+                        <outlet property="passwordTextField" destination="4M1-cC-7PE" id="ABL-wZ-bRD"/>
+                        <outlet property="profileImage" destination="OsD-4a-STD" id="Szb-Do-kyv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mr-3B-Agx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="psB-cq-XEO">
-                    <connections>
-                        <action selector="tapView:" destination="xZe-LD-dNY" id="De1-hQ-uWS"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="psB-cq-XEO"/>
             </objects>
             <point key="canvasLocation" x="1268" y="95.320197044334975"/>
         </scene>
@@ -215,25 +230,16 @@
                                 <state key="normal" title="취소">
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="dismissSignUpView" destination="qgI-ZA-c9O" eventType="touchUpInside" id="u7I-qq-bHf"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XM-cL-joT">
                                 <rect key="frame" x="149" y="542" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="이전"/>
-                                <connections>
-                                    <action selector="popToPrev" destination="qgI-ZA-c9O" eventType="touchUpInside" id="K0s-Yb-jKI"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaW-ax-ogU">
                                 <rect key="frame" x="265" y="542" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="가입"/>
-                                <connections>
-                                    <action selector="completeSignUp" destination="qgI-ZA-c9O" eventType="touchUpInside" id="aQ7-xV-hPG"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="생년월일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyF-af-dKS">
                                 <rect key="frame" x="31" y="159" width="69" height="37"/>
@@ -259,11 +265,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Iq-jJ-pcl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Wwf-YK-XOV">
-                    <connections>
-                        <action selector="tapView:" destination="qgI-ZA-c9O" id="dgs-dE-OXi"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Wwf-YK-XOV"/>
             </objects>
             <point key="canvasLocation" x="2000.8" y="94.581280788177338"/>
         </scene>
@@ -293,8 +295,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

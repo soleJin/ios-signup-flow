@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C2D79EF25774E3700E284EE /* message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D79EE25774E3700E284EE /* message.swift */; };
 		C7352B87256F59BD00C3B7F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7352B86256F59BD00C3B7F1 /* AppDelegate.swift */; };
 		C7352B89256F59BD00C3B7F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7352B88256F59BD00C3B7F1 /* SceneDelegate.swift */; };
 		C7352B8B256F59BD00C3B7F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7352B8A256F59BD00C3B7F1 /* MainViewController.swift */; };
@@ -17,10 +16,10 @@
 		FD19C5412576B1B100ED9BB9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD19C5402576B1B100ED9BB9 /* SignUpViewController.swift */; };
 		FD414EDD2575DF4300BB4C42 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD414EDC2575DF4300BB4C42 /* UserInformation.swift */; };
 		FD75767325775819009C4AE7 /* SignUpDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75767225775819009C4AE7 /* SignUpDetailViewController.swift */; };
+		FD7576782578B30D009C4AE7 /* message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7576772578B30D009C4AE7 /* message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C2D79EE25774E3700E284EE /* message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = message.swift; sourceTree = "<group>"; };
 		C7352B83256F59BD00C3B7F1 /* SignUpFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7352B86256F59BD00C3B7F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7352B88256F59BD00C3B7F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +31,7 @@
 		FD19C5402576B1B100ED9BB9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FD414EDC2575DF4300BB4C42 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 		FD75767225775819009C4AE7 /* SignUpDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetailViewController.swift; sourceTree = "<group>"; };
+		FD7576772578B30D009C4AE7 /* message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 				C7352B86256F59BD00C3B7F1 /* AppDelegate.swift */,
 				C7352B88256F59BD00C3B7F1 /* SceneDelegate.swift */,
 				FD414EDC2575DF4300BB4C42 /* UserInformation.swift */,
-				4C2D79EE25774E3700E284EE /* message.swift */,
+				FD7576772578B30D009C4AE7 /* message.swift */,
 				C7352B8A256F59BD00C3B7F1 /* MainViewController.swift */,
 				FD19C5402576B1B100ED9BB9 /* SignUpViewController.swift */,
 				FD75767225775819009C4AE7 /* SignUpDetailViewController.swift */,
@@ -149,13 +149,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7576782578B30D009C4AE7 /* message.swift in Sources */,
 				C7352B8B256F59BD00C3B7F1 /* MainViewController.swift in Sources */,
 				FD414EDD2575DF4300BB4C42 /* UserInformation.swift in Sources */,
 				C7352B87256F59BD00C3B7F1 /* AppDelegate.swift in Sources */,
 				FD19C5412576B1B100ED9BB9 /* SignUpViewController.swift in Sources */,
 				C7352B89256F59BD00C3B7F1 /* SceneDelegate.swift in Sources */,
 				FD75767325775819009C4AE7 /* SignUpDetailViewController.swift in Sources */,
-				4C2D79EF25774E3700E284EE /* message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
