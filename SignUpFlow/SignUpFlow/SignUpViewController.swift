@@ -23,12 +23,29 @@ class SignUpViewController: UIViewController {
         return picker
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+            
+        idTextField.delegate = self
+        passwordTextField.delegate = self
+        checkPasswordTextField.delegate = self
+        introductionTextView.delegate = self
+        
+    }
+    
+    @IBAction func tapView(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
     
     @IBAction func dissmissSignUpView() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func isFullFillTextView(introductionTextView :UITextView) {
+        if introductionTextView.text == "" {
+            nextButton.isEnabled = false
+        }
     }
     
 }
@@ -51,3 +68,19 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
     }
 }
 
+extension SignUpViewController: UITextViewDelegate, UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case idTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            checkPasswordTextField.becomeFirstResponder()
+        case checkPasswordTextField:
+            introductionTextView.becomeFirstResponder()
+        default:
+            break
+        }
+        return true
+    }
+}
