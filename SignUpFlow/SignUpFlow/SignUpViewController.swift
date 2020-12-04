@@ -75,17 +75,19 @@ extension SignUpViewController: UITextViewDelegate, UITextFieldDelegate {
     
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
-        if passwordTextField.text != checkPasswordTextField.text {
-            passwordTextField.textColor = .red
-            checkPasswordTextField.textColor = .red
-        }
     }
 
     func checkCanGoNext() {
-        if profileImage.image == nil || passwordTextField.text != checkPasswordTextField.text || idTextField.text == "" || passwordTextField.text == "" {
+        if profileImage.image == nil || idTextField.text == "" || passwordTextField.text == "" {
+            nextButton.isEnabled = false
+        } else if passwordTextField.text != checkPasswordTextField.text{
+            passwordTextField.textColor = .red
+            checkPasswordTextField.textColor = .red
             nextButton.isEnabled = false
         } else {
-        nextButton.isEnabled = true
+            nextButton.isEnabled = true
+            passwordTextField.textColor = .black
+            checkPasswordTextField.textColor = .black
         }
     }
     
